@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div
+        class="circle fixed z-20 bg-black opacity-20 h-8 w-8 rounded-3xl"
+      ></div>
+      <!-- navbar -->
+      <nav class="sticky top-7 z-40 px-3 h-0">
+        <div
+          class="container bg-white/70 backdrop-blur-sm px-5 py-3 rounded-full max-w-[950px] w-full mx-auto flex justify-between items-center"
+        >
+          <span class="font-caveat font-semibold text-2xl">iffi media works</span>
+
+          <!-- desktop navs -->
+          <ul id="navlinks" class="hidden md:flex items-center gap-8">
+            <li class="cursor-pointer hover:text-gray-600">Home</li>
+            <li class="cursor-pointer hover:text-gray-600">About</li>
+            <li class="cursor-pointer hover:text-gray-600">Services</li>
+
+            <li>
+              <button
+                class="relative block bg-gray-900 text-white text-xl text-center px-5 py-2 rounded-[50px] hover:bg-gray-600 transition-all duration-300 mx-auto cursor-pointer"
+              >
+                <span
+                  class=" overlay inline-block w-full h-full bg-transparent absolute left-0 top-0"
+                ></span>
+                contact
+              </button>
+            </li>
+          </ul>
+          <div class="md:hidden">
+            <span id="three-lines" class="cursor-pointer"
+              ><i
+                onclick="showNavicons()"
+                class="fa-solid fa-bars text-gray-700"
+              ></i
+            ></span>
+            <span id="closed" class="cursor-pointer hidden"
+              ><i
+                onclick="hideNavicons()"
+                class="fa-solid fa-x text-gray-700"
+              ></i
+            ></span>
+          </div>
+        </div>
+      </nav>
+      <header
+        id="hero"
+        class="relative overflow-x-hidden w-full min-h-screen bg-[linear-gradient(0deg,#FFFFFF_0%,#F0EBE3_100%)] flex flex-col pt-20 pb-10 "
+      >
+        <!-- mobile nav links -->
+        <div id="mobileNavs" class="md:hidden hidden pt-5 w-full">
+          <ul class="flex flex-col items-center gap-4">
+            <a href="#" class="w-full">
+              <li
+                class="bg-transparent text-center text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
+              >
+                Home
+              </li>
+            </a>
+            <a href="#" class="w-full">
+              <li
+                class="bg-transparent text-center text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
+              >
+                About
+              </li>
+            </a>
+            <a href="#" class="w-full">
+              <li
+                class="bg-transparent text-center text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
+              >
+                Services
+              </li>
+            </a>
+            <a href="#" class="w-full">
+              <li
+                class="bg-transparent text-center text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
+              >
+                Contact
+              </li>
+            </a>
+          </ul>
+        </div>
+
+        <!-- hero section -->
+        <div
+          class="relative md:max-w-[90%] mx-auto w-full my-20 flex flex-col items-center lg:flex-row lg:justify-between"
+        >
+          <div
+            id="textcontainer"
+            class="lg:w-1/2 w-full flex flex-col items-center justify-center lg:items-start mt-20 mb-28"
+          >
+            <h1
+              class="split font-roboto tracking-tight font-semibold text-5xl md:text-6xl lg:font-bold"
+            >
+              iFFi Media Works
+            </h1>
+            <p class="split text-3xl font-semibold md:text-4xl">
+              <span class="font-caveat">A top digital marketing agency</span>
+            </p>
+            <p class="split font-roboto text-lg text-gray-600 pt-2">
+              Crafting Tomorrow's Digital Presence Today.
+            </p>
+          </div>
+
+          <div class="relative md:flex md:scale-[108%] md:w-3/4 lg:mr-10">
+            <div
+              id="client"
+              class="absolute left-3 top-4 border rounded-3xl px-3 py-1"
+            >
+              <div id="number" class="flex items-center gap-2">
+                <p class="text-xl sm:text-3xl font-bold text-[#6c63ff]">122+</p>
+                <p class="leading-4 font-semibold">
+                  client <br />
+                  served
+                </p>
+              </div>
+            </div>
+            <div
+              id="client"
+              class="absolute right-5 bottom-8 lg:bottom-12 border rounded-3xl px-3 py-1"
+            >
+              <div id="number" class="flex items-center gap-2">
+                <p class="text-xl sm:text-3xl font-bold text-[#6c63ff]">122+</p>
+                <p class="leading-4 font-semibold">
+                  client <br />
+                  served
+                </p>
+              </div>
+            </div>
+            <img src="../src/Images/heroimage02.svg" alt="" />
+          </div>
+
+          <div
+            id="description"
+            class="lg:absolute left-0 top-full lg:top-[82%] mt-14 lg:mt-0 p-4 sm:p-0 max-w-[450px] font-roboto flex flex-col items-center lg:items-start gap-3"
+          >
+            <p class="text-gray-600 text-lg split">
+              We are a team of enthusiastic individuals who help brands grow by
+              unleashing the potential of social media
+            </p>
+            <div id="social-media" class="flex gap-2 text-2xl md:text-3xl my-3">
+              <i
+                class="fa-brands fa-instagram hover:text-pink-700 cursor-pointer duration-500"
+              ></i>
+              <i
+                class="fa-brands fa-facebook hover:text-blue-700 cursor-pointer duration-500"
+              ></i>
+              <i
+                class="fa-brands fa-x-twitter hover:text-gray-700 cursor-pointer duration-500"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin hover:text-blue-700 cursor-pointer duration-500"
+              ></i>
+            </div>
+
+            <button
+              class="relative block bg-gray-900 text-white text-xl text-center px-12 py-3 rounded-[50px] hover:bg-gray-600 transition-all duration-300 cursor-pointer"
+            >
+              <span
+                class="z-30 overlay inline-block w-full h-full bg-transparent absolute left-0 top-0"
+              ></span>
+              Contact
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- about section -->
+        <section
+          id="about-us"
+          class="gsap-section mx-auto py-10 relative w-full sm:py-20 bg-[linear-gradient(180deg,#FFFFFF_0%,#F0EBE3_100%)]"
+        >
+          <div class="max-w-[90%] mx-auto">
+            <h2
+              class="text-center text-4xl sm:text-5xl font-bold text-gray-900 pb-20"
+            >
+              About Us
+            </h2>
+            <div class="flex flex-col md:flex-row gap-10">
+              <div id="left" class="w-full lg:w-1/2 rounded-2xl bg-white p-4">
+                <img src="../src/Images/aboutus.svg" alt="" />
+              </div>
+              <div
+                id="right"
+                class="rounded-2xl bg-white p-6 w-full lg:pr-32 lg:w-1/2 text-lg font-roboto text-gray-600 flex flex-col gap-4"
+              >
+                <h2 class="text-3xl font-bold text-gray-900 pb-10">
+                  Transforming Ambition into Digital Growth.
+                </h2>
+                <p class="text-xl">
+                  Founded in 2022, iFFi Media Works is a Siwan-based digital
+                  marketing agency driven by one belief: small towns deserve big
+                  results. Our data-focused strategies have delivered 439% ROI,
+                  generated ₹4Cr+ client revenue, and helped businesses across
+                  multiple industries.
+                </p>
+                <p class="text-xl">
+                  our work goes beyond marketing — we’re building a
+                  digital-first ecosystem in Bihar. Guided by transparency,
+                  local expertise, and an education-driven approach, we aim to
+                  empower 1000+ businesses and generate ₹100Cr+ revenue by 2027.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- our services -->
+        <section
+          id="services"
+          class="py-10 relative w-full sm:py-20 bg-[linear-gradient(0deg,#FFFFFF_0%,#F0EBE3_100%)]"
+        >
+          <div class="max-w-[90%] mx-auto">
+            <h2
+              class="text-center text-4xl sm:text-5xl font-bold text-gray-900"
+            >
+              Our Expertise
+            </h2>
+            <p class="font-roboto text-gray-600 text-xl text-center py-4">
+              From strategy to execution, we deliver end-to-end solutions that
+              drive growth.
+            </p>
+            <div class="relative service-container py-12">
+              <div id="child-container">
+                <!-- services goes here -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- trusted-by -->
+        <section id="services" class="py-10 relative w-full sm:py-20 bg-white">
+          <div class="max-w-[90%] mx-auto">
+            <h2
+              class="text-center text-4xl sm:text-5xl font-bold text-gray-900"
+            >
+              Trusted by Brands, Big & Small
+            </h2>
+            <p class="font-roboto text-gray-600 text-xl text-center py-4">
+              We've helped over 100+ brands navigate the digital landscape.
+            </p>
+            <div class="flex flex-wrap pt-16">
+              <div
+                class="sm:border-r grow border-gray-700 text-center px-4 py-10"
+              >
+                <p class="text-5xl font-roboto font-semibold">100+</p>
+                <p>Brands served</p>
+              </div>
+              <div
+                class="sm:border-r grow border-gray-700 text-center px-4 py-10"
+              >
+                <p class="text-5xl font-roboto font-semibold">₹50 Cr+</p>
+                <p>Ad Spend Managed</p>
+              </div>
+              <div
+                class="sm:border-r grow border-gray-700 text-center px-4 py-10"
+              >
+                <p class="text-5xl font-roboto font-semibold">4.9/5</p>
+                <p>Average Rating</p>
+              </div>
+              <div class="grow border-gray-700 text-center px-4 py-10">
+                <p class="text-5xl font-roboto font-semibold">300%</p>
+                <p>Average Client ROI</p>
+              </div>
+            </div>
+            <div class="mt-10">
+              <button
+                class="relative block bg-gray-900 text-white text-xl text-center px-12 py-3 rounded-[50px] hover:bg-gray-600 transition-all duration-300 mx-auto cursor-pointer"
+              >
+                <span
+                  class="z-30 overlay inline-block w-full h-full bg-transparent absolute left-0 top-0"
+                ></span>
+                view case studies
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- testimonials -->
+        <section
+          id="services"
+          class="py-10 relative w-full sm:py-20 bg-[linear-gradient(0deg,#FFFFFF_0%,#F0EBE3_100%)]"
+        >
+          <div class="max-w-[90%] mx-auto">
+            <h2
+              class="text-center text-4xl sm:text-5xl font-bold text-gray-900"
+            >
+              Testimonials
+            </h2>
+            <p class="font-roboto text-gray-600 text-xl text-center py-4">
+              What our clients say
+            </p>
+            <div
+              class="card-container py-14 flex flex-col gap-7 items-center md:flex-row md:justify-center md:flex-wrap"
+            >
+              <div
+                class="tilt-card max-w-80 min-h-[380px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
+              >
+                <!-- Your card content here -->
+                <div class="w-12 h-12">
+                  <i class="fa-solid fa-quote-left text-3xl text-[#6c63ff]"></i>
+                </div>
+                <div>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                </div>
+                <p class="text-xl font-roboto pt-2 pb-5">
+                  "Our coaching institute's admissions tripled after their SEO
+                  work. We're now the #1 result for our keywords."
+                </p>
+                <p class="text-lg font-semibold font-roboto grow content-end">
+                  Amit Sharma, <span class="text-gray-500">Muzaffarpur</span>
+                </p>
+              </div>
+              <div
+                class="tilt-card max-w-80 min-h-[380px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
+              >
+                <!-- Your card content here -->
+                <div class="w-12 h-12">
+                  <i class="fa-solid fa-quote-left text-3xl text-[#6c63ff]"></i>
+                </div>
+                <div>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                </div>
+                <p class="text-xl font-roboto pt-2 pb-5">
+                  "For our boutique, iFFi delivered a stunning website and a
+                  branding package that feels truly premium. A pleasure to work
+                  with."
+                </p>
+                <p class="text-lg font-semibold font-roboto">
+                  Priya Singh, <span class="text-gray-500">Siwan</span>
+                </p>
+              </div>
+              <div
+                class="tilt-card max-w-80 min-h-[380px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
+              >
+                <!-- Your card content here -->
+                <div class="w-12 h-12">
+                  <i class="fa-solid fa-quote-left text-3xl text-[#6c63ff]"></i>
+                </div>
+                <div>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                  <i class="fa-solid fa-star text-[#ffd43b]"></i>
+                </div>
+                <p class="text-xl font-roboto pt-2 pb-5">
+                  "Our cafe in Kankarbagh is now a local hotspot, thanks to
+                  iFFi's targeted social media campaigns. The results speak for
+                  themselves."
+                </p>
+                <p class="text-lg font-semibold font-roboto">
+                  Rohan Kumar, <span class="text-gray-500">Patna</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section
+          id="question-container"
+          class="py-10 relative w-full sm:py-20 bg-[linear-gradient(180deg,#FFFFFF_0%,#F0EBE3_100%)]"
+        >
+          <div class="max-w-[90%] mx-auto">
+            <h2
+              class="text-center text-4xl sm:text-5xl font-bold text-gray-900"
+            >
+              FAQs
+            </h2>
+            <div class="flex flex-col gap-6 pt-10">
+              <div
+                class="fa-questions sm:max-w-[85%] shadow mx-auto px-4 overflow-hidden h-20 transition-all duration-400 cursor-pointer"
+              >
+                <div class="flex justify-between items-center py-6">
+                  <h3 class="text-lg sm:text-xl font-semibold">
+                    Why choose iffi media works?
+                  </h3>
+                  <i class="btn fa-solid fa-plus"></i>
+                </div>
+                <p>
+                  We combine deep local market knowledge of Bihar with
+                  national-level expertise. Our focus is on delivering
+                  measurable ROI—real results, not just vanity metrics. Strategy
+                  first, creativity second, results always.
+                </p>
+              </div>
+              <div
+                class="fa-questions sm:max-w-[85%] mx-auto shadow px-4 overflow-hidden h-20 transition-all duration-400 cursor-pointer"
+              >
+                <div class="flex justify-between py-6">
+                  <h3 class="text-lg sm:text-xl font-semibold">How long does it take to see results?</h3>
+                  <i class="btn fa-solid fa-plus"></i>
+                </div>
+                <p>
+                  Some strategies like paid ads can deliver quick results, while SEO and organic marketing usually take a few months to show consistent growth.
+                </p>
+              </div>
+              <div
+                class="fa-questions sm:max-w-[85%] mx-auto shadow px-4 overflow-hidden h-20 transition-all duration-400 cursor-pointer"
+              >
+                <div class="flex justify-between py-6">
+                  <h3 class="text-lg sm:text-xl font-semibold">Do you offer customized marketing strategies or fixed packages?</h3>
+                  <i class="btn fa-solid fa-plus"></i>
+                </div>
+                <p>
+                  We combine deep local market knowledge of Bihar with
+                  national-level expertise. Our focus is on delivering
+                  measurable ROI—real results, not just vanity metrics. Strategy
+                  first, creativity second, results always.
+                </p>
+              </div>
+              <div
+                class="fa-questions sm:max-w-[85%] mx-auto shadow px-4 overflow-hidden h-20 transition-all duration-400 cursor-pointer"
+              >
+                <div class="flex justify-between py-6">
+                  <h3 class="text-lg sm:text-xl font-semibold">How do you measure the success of marketing campaigns?</h3>
+                  <i class="btn fa-solid fa-plus"></i>
+                </div>
+                <p>
+                  We combine deep local market knowledge of Bihar with
+                  national-level expertise. Our focus is on delivering
+                  measurable ROI—real results, not just vanity metrics. Strategy
+                  first, creativity second, results always.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- call to action -->
+        <section id="services" class="py-10 relative w-full sm:py-20 bg-white">
+          <div class="max-w-[90%] mx-auto">
+            <h2
+              class="text-center text-4xl sm:text-5xl font-bold text-gray-900"
+            >
+              Ready to Grow?
+            </h2>
+            <p
+              class="font-roboto text-gray-600 text-xl text-center py-5 max-w-[700px] mx-auto"
+            >
+              Let's build your brand's future, together. Book a free,
+              no-obligation strategy call with our experts today.
+            </p>
+
+            <div class="mt-10">
+              <button
+                class="relative block bg-gray-900 text-white text-xl text-center px-12 py-3 rounded-[50px] hover:bg-gray-600 transition-all duration-300 mx-auto cursor-pointer"
+              >
+                <span
+                  class="z-30 overlay inline-block w-full h-full bg-transparent absolute left-0 top-0"
+                ></span>
+                Book a strategic call
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- footer -->
+      <footer
+        class="bg-[linear-gradient(180deg,#FFFFFF_0%,#F0EBE3_100%)] border-t font-roboto pb-16 lg:pb-8"
+      >
+        <div class="container mx-auto px-4 pt-16 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div class="space-y-4">
+              <a class="flex items-center space-x-2" href="/">
+                <span class="text-2xl font-bold">iFFi MEDIA WORKS</span>
+              </a>
+              <p
+                class="leading-relaxed font-roboto text-[16px] hover:text-gray-600 transition-colors duration-500"
+              >
+                Crafting Tomorrow's Digital Presence Today.
+              </p>
+              <div class="space-y-3 pt-2 text-[16px]">
+                <a
+                  href="tel:+919473370867"
+                  class="flex items-center space-x-3 font-roboto hover:text-gray-600 transition-colors duration-500"
+                >
+                  <i class="fa-solid fa-phone"></i>
+                  <span>Call: +919473370867</span>
+                </a>
+                <a
+                  href="https://wa.me/919473370867"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex items-center space-x-3 font-roboto hover:text-gray-600 transition-colors duration-500"
+                >
+                  <i class="fa-regular fa-message"></i>
+                  <span>WhatsApp: +919473370867</span>
+                </a>
+                <a
+                  href="mailto:hello@iffimediaworks.com"
+                  class="flex items-center space-x-3 font-roboto hover:text-gray-600 transition-colors duration-500"
+                >
+                  <i class="fa-regular fa-envelope"></i>
+                  <span
+                    class="font-roboto hover:text-gray-600 transition-colors duration-500"
+                    >hello@iffimediaworks.com</span
+                  ></a
+                >
+              </div>
+            </div>
+            <div class="space-y-4">
+              <span class="text-xl font-semibold">Services</span>
+              <ul class="space-y-2 pt-3 text-[16px]">
+                <li>
+                  <a
+                    class="inline-block hover:text-gray-600 transition-colors duration-500"
+                    href="/services"
+                    >Digital Marketing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="inline-block hover:text-gray-600 transition-colors duration-500"
+                    href="/services/seo"
+                    >SEO</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="inline-block hover:text-gray-600 transition-colors duration-500"
+                    href="/services/social-media"
+                    >Social Media</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="inline-block hover:text-gray-600 transition-colors duration-500"
+                    href="/services/web-development"
+                    >Web Development</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="space-y-4">
+              <span class="text-xl font-semibold">Company</span>
+              <ul class="space-y-2 pt-3 text-[16px]">
+                <li>
+                  <a
+                    class="inline-block font-roboto hover:text-gray-600 transition-colors duration-500"
+                    href="/about"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="inline-block font-roboto hover:text-gray-600 transition-colors duration-500"
+                    href="/cases"
+                    >Cases</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="inline-block font-roboto hover:text-gray-600 transition-colors duration-500"
+                    href="/pricing"
+                    >Pricing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="inline-block font-roboto hover:text-gray-600 transition-colors duration-500"
+                    href="/contact"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="space-y-4" style="opacity: 1; transform: none">
+              <span class="text-xl font-semibold font-roboto">Follow Us</span>
+              <div class="flex space-x-4 text-xl pt-3">
+                <a
+                  href="https://www.facebook.com/iffimediaworks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a
+                  href="https://www.twitter.com/iffimediaworks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  class="text-foreground/70 hover:text-foreground transition-colors"
+                >
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/iffimediawork"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  class="text-foreground/70 hover:text-foreground transition-colors"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/iffimediaworks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  class="text-foreground/70 hover:text-foreground transition-colors"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="border-t mt-12 pt-8 font-roboto">
+            <div
+              class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+            >
+              <p class="text-sm text-center md:text-left">
+                © 2025 iFFi Media Works. All rights reserved.
+              </p>
+              <div class="flex space-x-6 text-sm">
+                <a
+                  class="hover:text-blue-700 transition-all duration-400"
+                  href="/privacy-policy"
+                  >Privacy Policy</a
+                ><a
+                  class="hover:text-blue-700 transition-all duration-400"
+                  href="#"
+                  >Terms &amp; Conditions</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"
+      integrity="sha512-wOeEC+9qERAzhliwBFPDb6t8TiFFxdxG8vhK/Ygs7TuC44bpg8pg/X2/U/u+0X4fK05wb9id1EIipnF02+CFQw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- tilt.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

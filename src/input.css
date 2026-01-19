@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-roboto: "roboto", sans-serif; 
+  --font-caveat: "caveat", sans-serif;
+}
+
+/* 
+    background-color: transparent;
+    background-image: linear-gradient(0deg, #FFFFFF 0%, #F0EBE3 100%);
+
+
+        background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F0EBE3 100%);
+
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #F0EBE3 0%, #F0EBE3 100%);
+
+    
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F0EBE3 100%); */
