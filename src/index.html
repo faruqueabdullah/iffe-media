@@ -22,7 +22,7 @@
   <body>
     <div class="wrapper">
       <div
-        class="circle fixed z-20 bg-black opacity-20 h-8 w-8 rounded-3xl"
+        class="circle hidden sm:block fixed z-20 bg-black opacity-20 h-8 w-8 rounded-3xl"
       ></div>
       <!-- navbar -->
       <nav class="sticky top-7 z-40 px-3 h-0">
@@ -57,7 +57,7 @@
             ></span>
             <span id="closed" class="cursor-pointer hidden"
               ><i
-                onclick="hideNavicons()"
+                onclick="showNavicons()"
                 class="fa-solid fa-x text-gray-700"
               ></i
             ></span>
@@ -104,19 +104,19 @@
 
         <!-- hero section -->
         <div
-          class="relative md:max-w-[90%] mx-auto w-full my-20 flex flex-col items-center lg:flex-row lg:justify-between"
+          class="relative md:max-w-[90%] mx-auto w-full my-20 flex flex-col items-center lg:flex-row lg:justify-between px-3"
         >
           <div
             id="textcontainer"
             class="lg:w-1/2 w-full flex flex-col items-center justify-center lg:items-start mt-20 mb-28"
           >
             <h1
-              class="split font-roboto tracking-tight font-semibold text-5xl md:text-6xl lg:font-bold"
+              class="split font-roboto tracking-tight font-semibold text-4xl sm:text-5xl md:text-6xl lg:font-bold"
             >
               iFFi Media Works
             </h1>
             <p class="split text-3xl font-semibold md:text-4xl">
-              <span class="font-caveat">A top digital marketing agency</span>
+              <span class="font-caveat p-1">A top digital marketing agency</span>
             </p>
             <p class="split font-roboto text-lg text-gray-600 pt-2">
               Crafting Tomorrow's Digital Presence Today.
@@ -136,18 +136,7 @@
                 </p>
               </div>
             </div>
-            <div
-              id="client"
-              class="absolute right-5 bottom-8 lg:bottom-12 border rounded-3xl px-3 py-1"
-            >
-              <div id="number" class="flex items-center gap-2">
-                <p class="text-xl sm:text-3xl font-bold text-[#6c63ff]">122+</p>
-                <p class="leading-4 font-semibold">
-                  client <br />
-                  served
-                </p>
-              </div>
-            </div>
+            
             <img src="../src/Images/heroimage02.svg" alt="" />
           </div>
 
@@ -315,7 +304,7 @@
               class="card-container py-14 flex flex-col gap-7 items-center md:flex-row md:justify-center md:flex-wrap"
             >
               <div
-                class="tilt-card max-w-80 min-h-[380px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
+                class="tilt-card max-w-72 h-[370px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
               >
                 <!-- Your card content here -->
                 <div class="w-12 h-12">
@@ -337,7 +326,7 @@
                 </p>
               </div>
               <div
-                class="tilt-card max-w-80 min-h-[380px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
+                class="tilt-card max-w-72 h-[370px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
               >
                 <!-- Your card content here -->
                 <div class="w-12 h-12">
@@ -360,7 +349,7 @@
                 </p>
               </div>
               <div
-                class="tilt-card max-w-80 min-h-[380px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
+                class="tilt-card max-w-72 h-[370px] shadow bg-white rounded-xl px-4 py-8 flex flex-col gap-4"
               >
                 <!-- Your card content here -->
                 <div class="w-12 h-12">
@@ -399,7 +388,7 @@
             </h2>
             <div class="flex flex-col gap-6 pt-10">
               <div
-                class="fa-questions sm:max-w-[85%] shadow mx-auto px-4 overflow-hidden h-20 transition-all duration-400 cursor-pointer"
+                class="fa-questions sm:max-w-[85%] w-full shadow mx-auto px-4 overflow-hidden cursor-pointer"
               >
                 <div class="flex justify-between items-center py-6">
                   <h3 class="text-lg sm:text-xl font-semibold">
@@ -407,7 +396,7 @@
                   </h3>
                   <i class="btn fa-solid fa-plus"></i>
                 </div>
-                <p>
+                <p class="hidden w-full pb-2">
                   We combine deep local market knowledge of Bihar with
                   national-level expertise. Our focus is on delivering
                   measurable ROI—real results, not just vanity metrics. Strategy
@@ -415,24 +404,24 @@
                 </p>
               </div>
               <div
-                class="fa-questions sm:max-w-[85%] mx-auto shadow px-4 overflow-hidden h-20 transition-all duration-400 cursor-pointer"
+                class="fa-questions sm:max-w-[85%] w-full mx-auto shadow px-4 overflow-hidden cursor-pointer"
               >
                 <div class="flex justify-between py-6">
                   <h3 class="text-lg sm:text-xl font-semibold">How long does it take to see results?</h3>
                   <i class="btn fa-solid fa-plus"></i>
                 </div>
-                <p>
+                <p class="hidden w-full pb-2">
                   Some strategies like paid ads can deliver quick results, while SEO and organic marketing usually take a few months to show consistent growth.
                 </p>
               </div>
               <div
-                class="fa-questions sm:max-w-[85%] mx-auto shadow px-4 overflow-hidden h-20 transition-all duration-400 cursor-pointer"
+                class="fa-questions sm:max-w-[85%] w-full mx-auto shadow px-4 overflow-hidden cursor-pointer"
               >
                 <div class="flex justify-between py-6">
                   <h3 class="text-lg sm:text-xl font-semibold">Do you offer customized marketing strategies or fixed packages?</h3>
                   <i class="btn fa-solid fa-plus"></i>
                 </div>
-                <p>
+                <p class="hidden w-full pb-2">
                   We combine deep local market knowledge of Bihar with
                   national-level expertise. Our focus is on delivering
                   measurable ROI—real results, not just vanity metrics. Strategy
@@ -440,13 +429,13 @@
                 </p>
               </div>
               <div
-                class="fa-questions sm:max-w-[85%] mx-auto shadow px-4 overflow-hidden h-20 transition-all duration-400 cursor-pointer"
+                class="fa-questions sm:max-w-[85%] w-full mx-auto shadow px-4 overflow-hidden cursor-pointer"
               >
                 <div class="flex justify-between py-6">
                   <h3 class="text-lg sm:text-xl font-semibold">How do you measure the success of marketing campaigns?</h3>
                   <i class="btn fa-solid fa-plus"></i>
                 </div>
-                <p>
+                <p class="hidden w-full pb-2">
                   We combine deep local market knowledge of Bihar with
                   national-level expertise. Our focus is on delivering
                   measurable ROI—real results, not just vanity metrics. Strategy

@@ -46,16 +46,26 @@ const data = [
 ]
 
 function showNavicons() {
-  mobileNavs.classList.remove('hidden')
-  three_lines.classList.add('hidden')
-  close_button.classList.remove('hidden')
+  three_lines.classList.toggle('hidden')
+  close_button.classList.toggle('hidden')
+  mobileNavs.classList.toggle('hidden')
+
+  mobileNavlinks()
 }
 
-function hideNavicons() {
-  three_lines.classList.remove('hidden')
-  close_button.classList.add('hidden')
-  mobileNavs.classList.add('hidden')
+function mobileNavlinks() {
+  const links = Array.from(mobileNavs.children[0].children)
+
+  links.forEach((link) => {
+    link.addEventListener('click', () => {
+      three_lines.classList.remove('hidden')
+      close_button.classList.add('hidden')
+      mobileNavs.classList.add('hidden');
+
+    })
+  })
 }
+
 
 child_container.innerHTML = data.map((card) => {
   return (`
@@ -67,7 +77,7 @@ child_container.innerHTML = data.map((card) => {
               ${card.service}
             </h2>
             <div
-              class="hidden z-20 md:group-hover:block fixed right-32 top-[25%] w-sm rounded-xl p-4 bg-white"
+              class="hidden z-20 sm:group-hover:block fixed right-24 md:right-32 top-[25%] w-70 md:w-sm rounded-xl p-4 bg-white"
             >
               <img src=${card.image} alt="" />
               <h2
@@ -86,11 +96,11 @@ service_container.appendChild(child_container)
 question.forEach((e) => {
 
   e.addEventListener('click', () => {
-    // const p = e.children[1]
+    const p = e.children[1]
     const btn = e.querySelector('i:nth-of-type(1)')
     btn.classList.toggle('fa-minus')
-    e.classList.toggle("h-40")
-
+    // e.classList.toggle("h-40")
+    p.classList.toggle('hidden')
   })
 })
 
@@ -133,36 +143,36 @@ button.forEach((button) => {
 })
 
 
-button.forEach((button)=>{
+button.forEach((button) => {
   button.addEventListener('mouseleave', () => {
-  gsap.to(circle, {
-    scale: 1,
-    duration: 0.2,
-    backgroundColor: 'black',
-    border: 'none',
-    opacity: '20%'
+    gsap.to(circle, {
+      scale: 1,
+      duration: 0.2,
+      backgroundColor: 'black',
+      border: 'none',
+      opacity: '20%'
+    })
   })
-})
 })
 
 // content load
 
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(SplitText)
 
-  let split = SplitText.create('.split',{
+  let split = SplitText.create('.split', {
     type: 'words, lines',
     mask: "lines",
     autoSplit: true
   })
 
   gsap.from(split.lines, {
-  duration: 0.6,
-  opacity: 0,
-  y: 30,
-  stagger: 0.05, // Adds a delay between each character
-  // ease: "back"
-});
+    duration: 0.6,
+    opacity: 0,
+    y: 30,
+    stagger: 0.05, // Adds a delay between each character
+    // ease: "back"
+  });
 })
 
 // content section move animation
