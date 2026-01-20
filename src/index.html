@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -25,28 +25,36 @@
         class="circle hidden sm:block fixed z-20 bg-black opacity-20 h-8 w-8 rounded-3xl"
       ></div>
       <!-- navbar -->
-      <nav class="sticky top-7 z-40 px-3 h-0">
+      <nav class="sticky top-7 z-50 px-3 h-0">
         <div
-          class="container bg-white/70 backdrop-blur-sm px-5 py-3 rounded-full max-w-[950px] w-full mx-auto flex justify-between items-center"
+          class="container bg-white/70 backdrop-blur-sm px-5 py-3 rounded-full max-w-[950px] w-full mx-auto flex justify-between items-center shadow"
         >
-          <span class="font-caveat font-semibold text-2xl">iffi media works</span>
+          <span class="font-caveat font-semibold text-2xl"
+            >iffi media works</span
+          >
 
           <!-- desktop navs -->
           <ul id="navlinks" class="hidden md:flex items-center gap-8">
-            <li class="cursor-pointer hover:text-gray-600">Home</li>
-            <li class="cursor-pointer hover:text-gray-600">About</li>
-            <li class="cursor-pointer hover:text-gray-600">Services</li>
+            <a href="#home"
+              ><li class="cursor-pointer hover:text-gray-600">Home</li></a
+            >
+            <a href="#about"
+              ><li class="cursor-pointer hover:text-gray-600">About</li></a
+            >
+            <a href="#services"
+              ><li class="cursor-pointer hover:text-gray-600">Services</li></a
+            >
 
-            <li>
-              <button
+            <a>
+              <li
                 class="relative block bg-gray-900 text-white text-xl text-center px-5 py-2 rounded-[50px] hover:bg-gray-600 transition-all duration-300 mx-auto cursor-pointer"
               >
-                <span
+                <!-- <span
                   class=" overlay inline-block w-full h-full bg-transparent absolute left-0 top-0"
-                ></span>
+                ></span> -->
                 contact
-              </button>
-            </li>
+              </li>
+            </a>
           </ul>
           <div class="md:hidden">
             <span id="three-lines" class="cursor-pointer"
@@ -65,36 +73,39 @@
         </div>
       </nav>
       <header
-        id="hero"
-        class="relative overflow-x-hidden w-full min-h-screen bg-[linear-gradient(0deg,#FFFFFF_0%,#F0EBE3_100%)] flex flex-col pt-20 pb-10 "
+        id="home"
+        class="relative overflow-x-hidden w-full min-h-screen bg-[linear-gradient(0deg,#FFFFFF_0%,#F0EBE3_100%)] flex flex-col pt-20"
       >
         <!-- mobile nav links -->
-        <div id="mobileNavs" class="md:hidden hidden pt-5 w-full">
-          <ul class="flex flex-col items-center gap-4">
-            <a href="#" class="w-full">
+        <div
+          id="mobileNavs"
+          class="md:hidden hidden w-full h-full fixed top-0 pt-28 bg-white z-30"
+        >
+          <ul class="flex flex-col items-center gap-4 p-5">
+            <a href="#home" class="w-full">
               <li
-                class="bg-transparent text-center text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
+                class="bg-transparent text-center text-xl text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
               >
                 Home
               </li>
             </a>
-            <a href="#" class="w-full">
+            <a href="#about" class="w-full">
               <li
-                class="bg-transparent text-center text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
+                class="bg-transparent text-center text-xl text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
               >
                 About
               </li>
             </a>
-            <a href="#" class="w-full">
+            <a href="#services" class="w-full">
               <li
-                class="bg-transparent text-center text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
+                class="bg-transparent text-center text-xl text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
               >
                 Services
               </li>
             </a>
-            <a href="#" class="w-full">
+            <a href="#contact" class="w-full">
               <li
-                class="bg-transparent text-center text-black px-4.5 py-1 rounded-2xl hover:bg-[#F5F5F5] transition-all duration-300"
+                class="relative block bg-gray-900 text-white text-xl text-center px-5 py-2 rounded-[50px] hover:bg-gray-600 transition-all duration-300 mx-auto cursor-pointer"
               >
                 Contact
               </li>
@@ -104,7 +115,7 @@
 
         <!-- hero section -->
         <div
-          class="relative md:max-w-[90%] mx-auto w-full my-20 flex flex-col items-center lg:flex-row lg:justify-between px-3"
+          class="relative md:max-w-[90%] mx-auto w-full my-20 flex flex-col items-center lg:flex-row lg:justify-between px-3 lg:p-0"
         >
           <div
             id="textcontainer"
@@ -116,7 +127,9 @@
               iFFi Media Works
             </h1>
             <p class="split text-3xl font-semibold md:text-4xl">
-              <span class="font-caveat p-1">A top digital marketing agency</span>
+              <span class="font-caveat p-1"
+                >A top digital marketing agency</span
+              >
             </p>
             <p class="split font-roboto text-lg text-gray-600 pt-2">
               Crafting Tomorrow's Digital Presence Today.
@@ -126,7 +139,7 @@
           <div class="relative md:flex md:scale-[108%] md:w-3/4 lg:mr-10">
             <div
               id="client"
-              class="absolute left-3 top-4 border rounded-3xl px-3 py-1"
+              class="absolute left-3 top-4 rounded-3xl px-3 py-1"
             >
               <div id="number" class="flex items-center gap-2">
                 <p class="text-xl sm:text-3xl font-bold text-[#6c63ff]">122+</p>
@@ -136,7 +149,7 @@
                 </p>
               </div>
             </div>
-            
+
             <img src="../src/Images/heroimage02.svg" alt="" />
           </div>
 
@@ -177,8 +190,8 @@
       <main>
         <!-- about section -->
         <section
-          id="about-us"
-          class="gsap-section mx-auto py-10 relative w-full sm:py-20 bg-[linear-gradient(180deg,#FFFFFF_0%,#F0EBE3_100%)]"
+          id="about"
+          class="gsap-section mx-auto py-10 relative w-full sm:py-14 bg-[linear-gradient(180deg,#FFFFFF_0%,#F0EBE3_100%)]"
         >
           <div class="max-w-[90%] mx-auto">
             <h2
@@ -239,7 +252,7 @@
         </section>
 
         <!-- trusted-by -->
-        <section id="services" class="py-10 relative w-full sm:py-20 bg-white">
+        <section id="#" class="py-10 relative w-full sm:py-20 bg-white">
           <div class="max-w-[90%] mx-auto">
             <h2
               class="text-center text-4xl sm:text-5xl font-bold text-gray-900"
@@ -407,18 +420,25 @@
                 class="fa-questions sm:max-w-[85%] w-full mx-auto shadow px-4 overflow-hidden cursor-pointer"
               >
                 <div class="flex justify-between py-6">
-                  <h3 class="text-lg sm:text-xl font-semibold">How long does it take to see results?</h3>
+                  <h3 class="text-lg sm:text-xl font-semibold">
+                    How long does it take to see results?
+                  </h3>
                   <i class="btn fa-solid fa-plus"></i>
                 </div>
                 <p class="hidden w-full pb-2">
-                  Some strategies like paid ads can deliver quick results, while SEO and organic marketing usually take a few months to show consistent growth.
+                  Some strategies like paid ads can deliver quick results, while
+                  SEO and organic marketing usually take a few months to show
+                  consistent growth.
                 </p>
               </div>
               <div
                 class="fa-questions sm:max-w-[85%] w-full mx-auto shadow px-4 overflow-hidden cursor-pointer"
               >
                 <div class="flex justify-between py-6">
-                  <h3 class="text-lg sm:text-xl font-semibold">Do you offer customized marketing strategies or fixed packages?</h3>
+                  <h3 class="text-lg sm:text-xl font-semibold">
+                    Do you offer customized marketing strategies or fixed
+                    packages?
+                  </h3>
                   <i class="btn fa-solid fa-plus"></i>
                 </div>
                 <p class="hidden w-full pb-2">
@@ -432,7 +452,9 @@
                 class="fa-questions sm:max-w-[85%] w-full mx-auto shadow px-4 overflow-hidden cursor-pointer"
               >
                 <div class="flex justify-between py-6">
-                  <h3 class="text-lg sm:text-xl font-semibold">How do you measure the success of marketing campaigns?</h3>
+                  <h3 class="text-lg sm:text-xl font-semibold">
+                    How do you measure the success of marketing campaigns?
+                  </h3>
                   <i class="btn fa-solid fa-plus"></i>
                 </div>
                 <p class="hidden w-full pb-2">
@@ -447,7 +469,7 @@
         </section>
 
         <!-- call to action -->
-        <section id="services" class="py-10 relative w-full sm:py-20 bg-white">
+        <section id="contact" class="py-10 relative w-full sm:py-20 bg-white">
           <div class="max-w-[90%] mx-auto">
             <h2
               class="text-center text-4xl sm:text-5xl font-bold text-gray-900"
