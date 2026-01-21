@@ -9,7 +9,7 @@ const question = document.querySelectorAll('.fa-questions')
 const data = [
   {
     service: 'Digital Marketing',
-    image: '../src/Images/marketing.svg',
+    image: './Images/marketing.svg',
     text: 'Holistic strategies to amplify your online presence',
     icon: '<i class="fa-solid fa-arrow-trend-up"></i>'
   },
@@ -21,25 +21,25 @@ const data = [
   },
   {
     service: 'Social Media',
-    image: '../src/Images/socialmedia.svg',
+    image: './Images/socialmedia.svg',
     text: 'Engage communities and build brand loyalty.',
     icon: '<i class="fa-solid fa-user-group"></i>'
   },
   {
     service: 'Branding',
-    image: '../src/Images/socialmedia.svg',
+    image: './Images/socialmedia.svg',
     text: 'Crafting memorable identities that resonate.',
     icon: '<i class="fa-solid fa-bolt"></i>'
   },
   {
     service: 'Web Development',
-    image: '../src/Images/webdevelopment.svg',
+    image: './Images/webdevelopment.svg',
     text: 'Building high-performance digital storefronts.',
     icon: '<i class="fa-solid fa-laptop-code"></i>'
   },
   {
     service: 'Automation',
-    image: '../src/Images/automation.svg',
+    image: './Images/automation.svg',
     text: 'Streamlining processes for efficiency and scale.',
     icon: '<i class="fa-solid fa-wand-magic-sparkles"></i>'
   },
