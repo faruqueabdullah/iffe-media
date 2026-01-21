@@ -15,7 +15,7 @@ const data = [
   },
   {
     service: 'SEO',
-    image: '../src/Images/seo.svg',
+    image: './Images/seo.svg',
     text: 'Climb search rankings and drive organic traffic.',
     icon: '<i class="fa-solid fa-bullseye"></i>'
   },
