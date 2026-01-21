@@ -106,12 +106,17 @@ question.forEach((e) => {
 
 // card tilt effect
 
-VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+function cardTilt(){
+  if(window.innerWidth < 400) return
+
+  VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
   max: 12,          // tilt angle
   speed: 900,       // animation speed
   scale: 1.08,
   reverse: true,
 });
+}
+cardTilt()
 
 // cursor-moving animation
 
