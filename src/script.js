@@ -175,17 +175,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })
 
-// content section move animation
-gsap.from(".gsap-section", {
-  opacity: 0,
-  scale: 0.95,
-  duration: 0.8,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".gsap-section",
-    start: "top 50%",
-  }
-});
+// scroll-animation
 
+gsap.from(".box", {
+  y: 60,
+  opacity: 0,
+  stagger: 0.2,
+  
+  duration: 0.8,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".box",
+    markers:true,
+  },
+});
 
 
